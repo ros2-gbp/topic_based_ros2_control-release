@@ -1,0 +1,12 @@
+Source: ros-rolling-topic-based-ros2-control
+Section: misc
+Priority: optional
+Maintainer: Marq Rasmussen <marq.razz@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-angles, ros-rolling-hardware-interface, ros-rolling-picknik-ament-copyright <!nocheck>, ros-rolling-rclcpp, ros-rolling-ros2-control-test-assets <!nocheck>, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Homepage: https://github.com/PickNikRobotics/topic_based_ros2_control
+Standards-Version: 3.9.2
+
+Package: ros-rolling-topic-based-ros2-control
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-angles, ros-rolling-hardware-interface, ros-rolling-rclcpp, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Description: ros2 control hardware interface for topic_based sim
