@@ -1,0 +1,12 @@
+Source: ros-iron-topic-based-ros2-control
+Section: misc
+Priority: optional
+Maintainer: Marq Rasmussen <marq.razz@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-angles, ros-iron-hardware-interface, ros-iron-picknik-ament-copyright <!nocheck>, ros-iron-rclcpp, ros-iron-ros2-control-test-assets <!nocheck>, ros-iron-sensor-msgs, ros-iron-ros-workspace
+Homepage: https://github.com/PickNikRobotics/topic_based_ros2_control
+Standards-Version: 3.9.2
+
+Package: ros-iron-topic-based-ros2-control
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-angles, ros-iron-hardware-interface, ros-iron-rclcpp, ros-iron-sensor-msgs, ros-iron-ros-workspace
+Description: ros2 control hardware interface for topic_based sim
