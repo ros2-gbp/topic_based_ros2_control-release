@@ -1,0 +1,12 @@
+Source: ros-humble-topic-based-ros2-control
+Section: misc
+Priority: optional
+Maintainer: Marq Rasmussen <marq.razz@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-angles, ros-humble-hardware-interface, ros-humble-picknik-ament-copyright <!nocheck>, ros-humble-rclcpp, ros-humble-ros2-control-test-assets <!nocheck>, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Homepage: https://github.com/PickNikRobotics/topic_based_ros2_control
+Standards-Version: 3.9.2
+
+Package: ros-humble-topic-based-ros2-control
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-angles, ros-humble-hardware-interface, ros-humble-rclcpp, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Description: ros2 control hardware interface for topic_based sim
