@@ -1,0 +1,34 @@
+ros-rolling-topic-based-ros2-control (0.2.0-2noble) noble; urgency=high
+
+  * Check the mimicked joint interface before setting them (#13 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/13>)
+  * Check ros context is valid before spinning the node (#13 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/13>)
+  * Enable mobile base in Isaac (#12 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/12>)
+  * Contributors: Jafar Uruç, Marq Rasmussen
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Mon, 04 Sep 2023 00:00:00 -0000
+
+ros-rolling-topic-based-ros2-control (0.1.1-2noble) noble; urgency=high
+
+  * colcon: fixup missing test dependency (#9 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/9>)
+    fixes ros2_control_test_assets .hpp file was not found
+    Co-authored-by: Jafar Uruç <mailto:jafar.uruc@gmail.com>
+  * Contributors: Alex Moriarty
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Fri, 09 Jun 2023 00:00:00 -0000
+
+ros-rolling-topic-based-ros2-control (0.1.0-2noble) noble; urgency=high
+
+  * Fix joint state for mimic joints & expose epsilon parameter (#7 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/7>)
+    * Check the difference between command and current joint state to stop command publication
+    * Set mimic joints values
+    * Move magic numbers to constants
+    * Remove last_position_command_ variable
+  * Replace Isaac with TopicBased and generalize package (#5 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/5>)
+  * Clean up documentation (#4 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/4>)
+  * Removed unused node. (#3 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/3>)
+  * Add issac ros2 control hardware interface (#1 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/1>)
+  * Contributors: Alex Moriarty, Giovanni, Jafar Uruç
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Tue, 23 May 2023 00:00:00 -0000
+
+
