@@ -76,4 +76,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/PickNikRobotics/topic_based_ros2_control.git
-    version: :{auto}
+    version: 0.2.0
+    version_saved: :{auto}
