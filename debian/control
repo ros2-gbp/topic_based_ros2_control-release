@@ -1,0 +1,12 @@
+Source: ros-jazzy-topic-based-ros2-control
+Section: misc
+Priority: optional
+Maintainer: Marq Rasmussen <marq.razz@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-angles, ros-jazzy-hardware-interface, ros-jazzy-picknik-ament-copyright <!nocheck>, ros-jazzy-rclcpp, ros-jazzy-ros2-control-test-assets <!nocheck>, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Homepage: https://github.com/PickNikRobotics/topic_based_ros2_control
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-topic-based-ros2-control
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-angles, ros-jazzy-hardware-interface, ros-jazzy-rclcpp, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Description: ros2 control hardware interface for topic_based sim
