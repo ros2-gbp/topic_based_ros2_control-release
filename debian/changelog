@@ -1,0 +1,71 @@
+ros-jazzy-topic-based-ros2-control (0.3.0-1noble) noble; urgency=high
+
+  * Deprecation notices should be seen. Do not convert warnings into errors. (#36 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/36>)
+  * Add integration test (#28 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/28>)
+    * Add ruff/ruff format to pre-commit & Add integration test
+    * Set joint_states_ to initial_value as well
+  * Update HARDWARE_INTERFACE_VERSION_GTE from hardware_interface's version.h (#32 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/32>)
+  * Update README.md
+  * Fix RessourceManager constructor (#30 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/30>)
+    * Fix rm() constructor
+    * Enable CI on jazzy/rolling
+    * Add macro to check hardware_interface version
+    ---------
+    Co-authored-by: JafarAbdi <mailto:jafar.uruc@gmail.com>
+  * Update README.md (#31 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/31>)
+  * Allow publisher to always publish by setting the threshold to zero. (#22 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/22>)
+    * Allow publisher to always publish by setting the threshold to zero.
+    On documentation (https://github.com/PickNikRobotics/topic_based_ros2_control/blob/main/doc/user.md)
+    trigger_joint_command_threshold can be configuration with zero so that the allow publisher to
+    always send the joint command.
+    However, in the code the condition was set with:
+    ```
+    if (diff <= trigger_joint_command_threshold\_)
+    {
+    return hardware_interface::return_type::OK;
+    }
+    ```
+    In case trigger_joint_command_threshold_ is set to zero, diff can still be zero so
+    it will not trigger the send.
+    This PR tries to address the above mentioned case.
+    * Revert "Allow publisher to always publish by setting the threshold to zero."
+    This reverts commit a799b539d877d1a2ca7203f5d57bc4c805df7202.
+    * Update the documentation instead (-1).
+  * Contributors: Bence Magyar, Christoph Fröhlich, Jafar Uruç, Yong Tang
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Sat, 16 Aug 2025 00:00:00 -0000
+
+ros-jazzy-topic-based-ros2-control (0.2.0-1noble) noble; urgency=high
+
+  * Check the mimicked joint interface before setting them (#13 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/13>)
+  * Check ros context is valid before spinning the node (#13 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/13>)
+  * Enable mobile base in Isaac (#12 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/12>)
+  * Contributors: Jafar Uruç, Marq Rasmussen
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Mon, 04 Sep 2023 00:00:00 -0000
+
+ros-jazzy-topic-based-ros2-control (0.1.1-1noble) noble; urgency=high
+
+  * colcon: fixup missing test dependency (#9 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/9>)
+    fixes ros2_control_test_assets .hpp file was not found
+    Co-authored-by: Jafar Uruç <mailto:jafar.uruc@gmail.com>
+  * Contributors: Alex Moriarty
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Fri, 09 Jun 2023 00:00:00 -0000
+
+ros-jazzy-topic-based-ros2-control (0.1.0-1noble) noble; urgency=high
+
+  * Fix joint state for mimic joints & expose epsilon parameter (#7 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/7>)
+    * Check the difference between command and current joint state to stop command publication
+    * Set mimic joints values
+    * Move magic numbers to constants
+    * Remove last_position_command_ variable
+  * Replace Isaac with TopicBased and generalize package (#5 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/5>)
+  * Clean up documentation (#4 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/4>)
+  * Removed unused node. (#3 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/3>)
+  * Add issac ros2 control hardware interface (#1 <https://github.com/PickNikRobotics/topic_based_ros2_control/issues/1>)
+  * Contributors: Alex Moriarty, Giovanni, Jafar Uruç
+
+ -- Marq Rasmussen <marq.razz@gmail.com>  Tue, 23 May 2023 00:00:00 -0000
+
+
